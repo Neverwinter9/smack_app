@@ -48,14 +48,14 @@ class AuthService {
         let lowerCaseEmail = email.lowercased()
         
         let header = [
-            "Content-Type": "application/jason; charset=utf-8"
+            "Content-Type": "application/json; charset=utf-8"
         ]
         
         let body: [String: Any] = [
             "email": lowerCaseEmail,
             "password": password
         ]
-        S
+        
         Alamofire.request(URL_REGISTER, method: .post, parameters: body, encoding: JSONEncoding.default, headers: header).responseString { (response) in
             if response.result.error == nil {
                 completion(true)
