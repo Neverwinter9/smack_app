@@ -8,9 +8,10 @@
 
 import UIKit
 
-@IBDesignable   //to see UI changes in Storyboard
+@IBDesignable   // @IBDesignable to see UI changes in Storyboard
 class RoundedButton: UIButton {
-
+    
+    // @IBInspectable to edit item properties in Interface Builder’s inspector panel (Storyboard)
     @IBInspectable var cornerRadius: CGFloat = 3.0 {
         didSet {
             self.layer.cornerRadius = cornerRadius

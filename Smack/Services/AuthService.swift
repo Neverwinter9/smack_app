@@ -76,7 +76,7 @@ class AuthService {
             
             if response.result.error == nil {
                 
-                //Standart way to handle a JSON response (w token)
+                // Standart way to handle a JSON response (w token)
                 /*if let json = response.result.value as? Dictionary<String, Any> {
                     if let email = json["user"] as? String {
                         self.userEmail = email
@@ -86,7 +86,7 @@ class AuthService {
                     }
                 }*/
             
-            //Fancy SwiftyJSON way to handle a JSON response (w token)
+            // Fancy SwiftyJSON way to handle a JSON response (w token)
             guard let data = response.data else { return }
                 let json = try! JSON(data: data)
             self.userEmail = json["user"].stringValue
