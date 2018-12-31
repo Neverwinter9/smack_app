@@ -10,7 +10,7 @@ import UIKit
 
 class ChatVC: UIViewController {
     
-    //Outlets
+    // Outlets
     @IBOutlet weak var menuBtn: UIButton!
     
     
@@ -19,5 +19,13 @@ class ChatVC: UIViewController {
         menuBtn.addTarget(revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+        
+        
+        // To notify ChannelVC that all user data is already there (use case: app has been killed but a user didn't logout)
+        if AuthService.instance.isLoggedIn {
+            AuthService.instance.findUserByEmail(completion: { (success) in
+                NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+            })
+        }
     }
 }
