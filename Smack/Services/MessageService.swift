@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class MessageService {
     
+    // All services must be singletons
     static let instance = MessageService()
     
     var channels = [Channel]()

@@ -13,6 +13,7 @@ import SwiftyJSON
 
 class AuthService {
     
+    // All services must be singletons
     static let instance = AuthService()
     
     let defaults = UserDefaults.standard

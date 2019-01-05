@@ -10,6 +10,7 @@ import Foundation
 
 class UserDataService {
     
+    // All services must be singletons
     static let instance = UserDataService()
     
     public private(set) var id = ""
