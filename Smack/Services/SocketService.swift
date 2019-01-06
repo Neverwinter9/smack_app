@@ -22,7 +22,7 @@ class SocketService: NSObject {
     //var socket: SocketIOClient = SocketIOClient(socketURL: URL(string: BASE_URL)!)
     
     // New way
-    let manager = SocketManager(socketURL: URL(string: "\(BASE_URL)")!) // Creating the SocketManager
+    let manager = SocketManager(socketURL: URL(string: "\(BASE_URL)")!) // Creating a SocketManager
     lazy var socket: SocketIOClient = manager.defaultSocket // Instantiating the socket
     
     
@@ -54,5 +54,12 @@ class SocketService: NSObject {
             MessageService.instance.channels.append(newChannel)
             completion(true)
         }
+    }
+    
+    // Sending new message (client request)
+    func addMessage(messageBody: String, userId: String, channelId: String, completion: @escaping CompletionHandler) {
+        let user = UserDataService.instance
+        socket.emit("newMessage", messageBody, userId, channelId, user.name, user.avatarName, user.avatarColor)
+        completion(true)
     }
 }

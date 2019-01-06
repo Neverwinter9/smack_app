@@ -13,10 +13,17 @@ class ChatVC: UIViewController {
     // Outlets
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var channelNameLbl: UILabel!
+    @IBOutlet weak var messageTxtBox: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.bindToKeyboard()
         
+        // Hide keyboard tap handler
+        let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
+        view.addGestureRecognizer(tap)
+        
+        // SWRevealView (Channel View side menu) gestures handler
         menuBtn.addTarget(revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -46,12 +53,31 @@ class ChatVC: UIViewController {
         updateWithChannel()
     }
     
+    @objc func handleTap() {
+        view.endEditing(true)
+    }
+    
     func updateWithChannel() {
         // To display selected channel name in header
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLbl.text = "#\(channelName)"
         
         getMessages()
+    }
+    
+    @IBAction func sendMsgPressed(_ sender: Any) {
+        if AuthService.instance.isLoggedIn {
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            guard let message = messageTxtBox.text else { return }
+            
+            SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId) { (success) in
+                if success {
+                    self.messageTxtBox.text = ""
+                    // To clear messageTxtBox after a message is sent
+                    self.messageTxtBox.resignFirstResponder()
+                }
+            }
+        }
     }
     
     func onLoginGetMessages() {
