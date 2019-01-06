@@ -11,7 +11,7 @@ import SocketIO
 
 class SocketService: NSObject {
 
-    // All services must be singletons
+    // All services must be singletons!
     static let instance = SocketService()
     
     override init() {

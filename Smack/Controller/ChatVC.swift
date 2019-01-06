@@ -46,17 +46,32 @@ class ChatVC: UIViewController {
         updateWithChannel()
     }
     
-    // To display selected channel name in header
     func updateWithChannel() {
+        // To display selected channel name in header
         let channelName = MessageService.instance.selectedChannel?.channelTitle ?? ""
         channelNameLbl.text = "#\(channelName)"
+        
+        getMessages()
     }
     
     func onLoginGetMessages() {
         MessageService.instance.findAllChannel { (success) in
             if success {
-                // Do stuff with channels
+                // Channels existanse check (if so, select the first one, otherwise change the label to "No channels yet!")
+                if MessageService.instance.channels.count > 0 {
+                    MessageService.instance.selectedChannel = MessageService.instance.channels[0]
+                    self.updateWithChannel()
+                } else {
+                    self.channelNameLbl.text = "No channels yet!"
+                }
             }
+        }
+    }
+    
+    // To get messages for a selected channel
+    func getMessages() {
+        guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+        MessageService.instance.findAllMessagesForChannel(channelId: channelId) { (success) in
         }
     }
 }
