@@ -15,6 +15,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var channelNameLbl: UILabel!
     @IBOutlet weak var messageTxtBox: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sendBtn: UIButton!
+    
+    // Variables
+    var isTyping: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +27,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
+        
         // Dynamic message re-sizer
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableView.automaticDimension
+        
+        // To hide sendBtn by default
+        sendBtn.isHidden = true
         
         // Hide keyboard tap handler
         let tap = UITapGestureRecognizer(target: self, action: #selector(ChatVC.handleTap))
@@ -38,6 +46,19 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil) // Completion notification listener (Event: "User is logged in")
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil) // Notification listener (Event: "Channel Selected")
+        
+        // Updating chat tableview with a new message received
+        SocketService.instance.getChatMessage { (success) in
+            if success {
+                self.tableView.reloadData()
+                
+                // To scroll tableView to the last message
+                if MessageService.instance.messages.count > 0 {
+                    let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: true)
+                }
+            }
+        }
         
         // To notify ChannelVC that all user data is already there (use case: app has been killed but a user didn't logout)
         if AuthService.instance.isLoggedIn {
@@ -54,6 +75,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             onLoginGetMessages()
         } else {
             channelNameLbl.text = "Please Log In"
+            tableView.reloadData()
         }
     }
     
@@ -71,6 +93,19 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         channelNameLbl.text = "#\(channelName)"
         
         getMessages()
+    }
+    
+    // Logic to hide sendBtn to prevent sending empty strings
+    @IBAction func messageBoxEditing(_ sender: Any) {
+        if messageTxtBox.text == "" {
+            isTyping = false
+            sendBtn.isHidden = true
+        } else {
+            if isTyping == false {
+                sendBtn.isHidden = false
+            }
+            isTyping = true
+        }
     }
     
     @IBAction func sendMsgPressed(_ sender: Any) {
