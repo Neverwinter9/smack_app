@@ -133,7 +133,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             // Client request (Stop type)
             SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
         } else {
-            if isTyping == false {
+            if isTyping == true { // Fixed logic bug (was false)
                 sendBtn.isHidden = false
                 // Client request (Start type)
                 SocketService.instance.socket.emit("startType", UserDataService.instance.name, channelId)
