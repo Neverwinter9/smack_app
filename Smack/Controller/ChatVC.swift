@@ -48,11 +48,11 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil) // Completion notification listener (Event: "User is logged in")
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil) // Notification listener (Event: "Channel Selected")
         
-        // Updating chat tableview with a new message received
-        SocketService.instance.getChatMessage { (success) in
-            if success {
+        // Updating chat tableview with a new message received (For a selected channel ONLY)
+        SocketService.instance.getChatMessage { (newMessage) in
+            if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                MessageService.instance.messages.append(newMessage)
                 self.tableView.reloadData()
-                
                 // To scroll tableView to the last message
                 if MessageService.instance.messages.count > 0 {
                     let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
@@ -149,10 +149,11 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             SocketService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId) { (success) in
                 if success {
-                    // To clear messageTxtBox after a message is sent
+                    // To clear messageTxtBox after a message is sent && hide sendBtn
                     self.messageTxtBox.text = ""
-                    self.sendBtn.isHidden = true
                     self.messageTxtBox.resignFirstResponder()
+                    self.sendBtn.isHidden = true
+                    self.sendBtn.resignFirstResponder()
                     SocketService.instance.socket.emit("stopType", UserDataService.instance.name, channelId)
                 }
             }
