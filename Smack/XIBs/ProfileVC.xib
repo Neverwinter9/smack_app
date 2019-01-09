@@ -63,6 +63,9 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CwG-EG-yd6">
                             <rect key="frame" x="299" y="8" width="28" height="28"/>
                             <state key="normal" image="closeButton"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Close button"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="closeModelPressed:" destination="-1" eventType="touchUpInside" id="8Hb-89-F1N"/>
                             </connections>
@@ -73,6 +76,9 @@
                             <state key="normal" title="Logout">
                                 <color key="titleColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Logout button"/>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="logoutPressed:" destination="-1" eventType="touchUpInside" id="RP0-tK-0ns"/>
                             </connections>

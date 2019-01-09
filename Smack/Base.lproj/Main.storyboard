@@ -55,6 +55,9 @@
                                         <state key="normal" image="smackBurger">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Overflow menu button"/>
+                                        </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iS4-zU-JFh">
                                         <rect key="frame" x="161.5" y="45.5" width="52" height="21"/>
@@ -81,6 +84,9 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Message text field"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="messageBoxEditing:" destination="fts-6Q-K0y" eventType="editingChanged" id="1Tv-NN-uvI"/>
                                 </connections>
@@ -88,6 +94,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhB-UO-v3c">
                                 <rect key="frame" x="337" y="632" width="30" height="30"/>
                                 <state key="normal" image="send"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Send button"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendMsgPressed:" destination="fts-6Q-K0y" eventType="touchUpInside" id="gs9-Aa-bho"/>
                                 </connections>
@@ -219,6 +228,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Login button"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginBtnPressed:" destination="PiW-Fd-XTI" eventType="touchUpInside" id="BzQ-Hv-BnO"/>
                                 </connections>
@@ -246,6 +258,9 @@
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Channel label"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -254,6 +269,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Channel cell"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="channelName" destination="BeC-dq-QKF" id="bIv-zh-WlM"/>
                                         </connections>
@@ -265,6 +283,9 @@
                                 <state key="normal" image="addChannelButton">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Add channel button"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="addChannelPressed:" destination="PiW-Fd-XTI" eventType="touchUpInside" id="dE3-jg-OMH"/>
                                 </connections>
@@ -335,6 +356,9 @@
                                 <state key="normal" title="Don't have an account? Sign up here">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Sign up button"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAccountBtnPressed:" destination="vYx-W7-M0O" eventType="touchUpInside" id="EnL-Q6-AYD"/>
                                 </connections>
@@ -342,6 +366,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oz4-vN-1XZ">
                                 <rect key="frame" x="331" y="28" width="28" height="28"/>
                                 <state key="normal" image="closeButton"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Close button"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closePressed:" destination="vYx-W7-M0O" eventType="touchUpInside" id="9w8-Dy-Ghr"/>
                                 </connections>
@@ -357,6 +384,9 @@
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Email text field"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRQ-vk-UdW">
                                         <rect key="frame" x="0.0" y="34" width="250" height="2"/>
@@ -374,6 +404,9 @@
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Password text field"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S95-Ar-MDn">
                                         <rect key="frame" x="0.0" y="84" width="250" height="2"/>
@@ -400,6 +433,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Login button"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginPressed:" destination="vYx-W7-M0O" eventType="touchUpInside" id="GJJ-Vs-O5W"/>
@@ -470,6 +504,7 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Create account button"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAccountPressed:" destination="dzT-F8-gHd" eventType="touchUpInside" id="NO2-8Y-2Sh"/>
@@ -484,6 +519,9 @@
                                 <state key="normal" title="Choose avatar">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Choose avatar button"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pickAvatarPressed:" destination="dzT-F8-gHd" eventType="touchUpInside" id="i5H-eu-051"/>
                                 </connections>
@@ -491,6 +529,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bip-sz-4Te">
                                 <rect key="frame" x="331" y="28" width="28" height="28"/>
                                 <state key="normal" image="closeButton"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Close button"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="closePressed:" destination="dzT-F8-gHd" eventType="touchUpInside" id="vOw-sL-r8b"/>
                                 </connections>
@@ -506,6 +547,9 @@
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Username text field"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5X-GL-nZu">
                                         <rect key="frame" x="0.0" y="34" width="250" height="2"/>
@@ -523,6 +567,9 @@
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Email text field"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2R-Bl-cgh">
                                         <rect key="frame" x="0.0" y="84" width="250" height="2"/>
@@ -540,6 +587,9 @@
                                         <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Password text field"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvE-Xt-ghb">
                                         <rect key="frame" x="0.0" y="134" width="250" height="2"/>
@@ -564,6 +614,9 @@
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Generate background color button"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAccountBtnPressed:" destination="vYx-W7-M0O" eventType="touchUpInside" id="ws6-rK-Ij4"/>
                                     <action selector="pickBGColorPressed:" destination="dzT-F8-gHd" eventType="touchUpInside" id="Xw2-OF-5Ny"/>
@@ -629,6 +682,9 @@
                                     <constraint firstAttribute="height" constant="28" id="ito-Ql-g7Q"/>
                                 </constraints>
                                 <state key="normal" image="smackBack"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Back button"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="backPressed:" destination="qaM-1w-Mbt" eventType="touchUpInside" id="rMU-28-UxY"/>
                                 </connections>
@@ -675,6 +731,9 @@
                                             <constraint firstAttribute="trailing" secondItem="EMc-Xu-ukk" secondAttribute="trailing" constant="10" id="Zyj-oT-SkR"/>
                                             <constraint firstItem="EMc-Xu-ukk" firstAttribute="top" secondItem="NgI-Ob-hI7" secondAttribute="top" constant="10" id="khB-58-7Qn"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Avatar cell"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="avatarImg" destination="EMc-Xu-ukk" id="QKj-RT-saW"/>
                                         </connections>

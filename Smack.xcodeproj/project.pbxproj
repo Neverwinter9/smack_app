@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		535FCBFD3462FE5293E021CF /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751667BC04167F82D1810DD8 /* Pods_Smack.framework */; };
+		540843AC21E5AB830002A2AD /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843AB21E5AB830002A2AD /* BaseScreen.swift */; };
+		540843B621E5B1690002A2AD /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843B521E5B1690002A2AD /* ChatScreen.swift */; };
+		540843B821E5E4150002A2AD /* ChannelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843B721E5E4150002A2AD /* ChannelScreen.swift */; };
+		540843BA21E5E87F0002A2AD /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843B921E5E87F0002A2AD /* LoginScreen.swift */; };
+		540843BD21E5EFA00002A2AD /* CloseButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843BC21E5EFA00002A2AD /* CloseButtonExtension.swift */; };
+		540843BF21E5F4320002A2AD /* CreateChannelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843BE21E5F4320002A2AD /* CreateChannelScreen.swift */; };
+		540843C121E5F8BD0002A2AD /* ClearTxtFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C021E5F8BD0002A2AD /* ClearTxtFieldExtension.swift */; };
+		540843C321E6055C0002A2AD /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C221E6055C0002A2AD /* TestUser.swift */; };
 		542212B621C1EA1F009146DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542212B521C1EA1F009146DA /* AppDelegate.swift */; };
 		542212BB21C1EA1F009146DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542212B921C1EA1F009146DA /* Main.storyboard */; };
 		542212BD21C1EA20009146DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542212BC21C1EA20009146DA /* Assets.xcassets */; };
@@ -38,7 +46,27 @@
 		54FE24DB21E215E30021E68D /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FE24DA21E215E30021E68D /* KeyboardBoundView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		540843AE21E5AB830002A2AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 542212AA21C1EA1F009146DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 542212B121C1EA1F009146DA;
+			remoteInfo = Smack;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		540843A921E5AB830002A2AD /* SmackUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmackUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		540843AB21E5AB830002A2AD /* BaseScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScreen.swift; sourceTree = "<group>"; };
+		540843AD21E5AB830002A2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		540843B521E5B1690002A2AD /* ChatScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatScreen.swift; sourceTree = "<group>"; };
+		540843B721E5E4150002A2AD /* ChannelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelScreen.swift; sourceTree = "<group>"; };
+		540843B921E5E87F0002A2AD /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		540843BC21E5EFA00002A2AD /* CloseButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButtonExtension.swift; sourceTree = "<group>"; };
+		540843BE21E5F4320002A2AD /* CreateChannelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelScreen.swift; sourceTree = "<group>"; };
+		540843C021E5F8BD0002A2AD /* ClearTxtFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTxtFieldExtension.swift; sourceTree = "<group>"; };
+		540843C221E6055C0002A2AD /* TestUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
 		542212B221C1EA1F009146DA /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		542212B521C1EA1F009146DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		542212BA21C1EA1F009146DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,6 +105,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		540843A621E5AB830002A2AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		542212AF21C1EA1F009146DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,11 +132,52 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		540843AA21E5AB830002A2AD /* SmackUITests */ = {
+			isa = PBXGroup;
+			children = (
+				540843BB21E5EF7B0002A2AD /* Support */,
+				540843B421E5ADD20002A2AD /* Tests */,
+				540843B321E5ADC10002A2AD /* Screens */,
+				540843AD21E5AB830002A2AD /* Info.plist */,
+			);
+			path = SmackUITests;
+			sourceTree = "<group>";
+		};
+		540843B321E5ADC10002A2AD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				540843AB21E5AB830002A2AD /* BaseScreen.swift */,
+				540843B521E5B1690002A2AD /* ChatScreen.swift */,
+				540843B721E5E4150002A2AD /* ChannelScreen.swift */,
+				540843BE21E5F4320002A2AD /* CreateChannelScreen.swift */,
+				540843B921E5E87F0002A2AD /* LoginScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		540843B421E5ADD20002A2AD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		540843BB21E5EF7B0002A2AD /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				540843BC21E5EFA00002A2AD /* CloseButtonExtension.swift */,
+				540843C021E5F8BD0002A2AD /* ClearTxtFieldExtension.swift */,
+				540843C221E6055C0002A2AD /* TestUser.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		542212A921C1EA1F009146DA = {
 			isa = PBXGroup;
 			children = (
 				542212C721C1F444009146DA /* Supporting Files */,
 				542212B421C1EA1F009146DA /* Smack */,
+				540843AA21E5AB830002A2AD /* SmackUITests */,
 				542212B321C1EA1F009146DA /* Products */,
 				431ED16AA9E97B40217DB841 /* Pods */,
 				7A4016C2948A722B738E02C0 /* Frameworks */,
@@ -112,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				542212B221C1EA1F009146DA /* Smack.app */,
+				540843A921E5AB830002A2AD /* SmackUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,6 +297,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		540843A821E5AB830002A2AD /* SmackUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 540843B021E5AB830002A2AD /* Build configuration list for PBXNativeTarget "SmackUITests" */;
+			buildPhases = (
+				540843A521E5AB830002A2AD /* Sources */,
+				540843A621E5AB830002A2AD /* Frameworks */,
+				540843A721E5AB830002A2AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				540843AF21E5AB830002A2AD /* PBXTargetDependency */,
+			);
+			name = SmackUITests;
+			productName = SmackUITests;
+			productReference = 540843A921E5AB830002A2AD /* SmackUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		542212B121C1EA1F009146DA /* Smack */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 542212C421C1EA20009146DA /* Build configuration list for PBXNativeTarget "Smack" */;
@@ -249,6 +344,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Pavel Ponomarev";
 				TargetAttributes = {
+					540843A821E5AB830002A2AD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 542212B121C1EA1F009146DA;
+					};
 					542212B121C1EA1F009146DA = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
@@ -269,11 +368,19 @@
 			projectRoot = "";
 			targets = (
 				542212B121C1EA1F009146DA /* Smack */,
+				540843A821E5AB830002A2AD /* SmackUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		540843A721E5AB830002A2AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		542212B021C1EA1F009146DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,6 +441,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		540843A521E5AB830002A2AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				540843C321E6055C0002A2AD /* TestUser.swift in Sources */,
+				540843B821E5E4150002A2AD /* ChannelScreen.swift in Sources */,
+				540843C121E5F8BD0002A2AD /* ClearTxtFieldExtension.swift in Sources */,
+				540843BF21E5F4320002A2AD /* CreateChannelScreen.swift in Sources */,
+				540843BD21E5EFA00002A2AD /* CloseButtonExtension.swift in Sources */,
+				540843BA21E5E87F0002A2AD /* LoginScreen.swift in Sources */,
+				540843AC21E5AB830002A2AD /* BaseScreen.swift in Sources */,
+				540843B621E5B1690002A2AD /* ChatScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		542212AE21C1EA1F009146DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +488,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		540843AF21E5AB830002A2AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 542212B121C1EA1F009146DA /* Smack */;
+			targetProxy = 540843AE21E5AB830002A2AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		542212B921C1EA1F009146DA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -386,6 +516,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		540843B121E5AB830002A2AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT75D52584;
+				INFOPLIST_FILE = SmackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neverwinter9.SmackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Smack;
+			};
+			name = Debug;
+		};
+		540843B221E5AB830002A2AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT75D52584;
+				INFOPLIST_FILE = SmackUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.neverwinter9.SmackUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Smack;
+			};
+			name = Release;
+		};
 		542212C221C1EA20009146DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,6 +677,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT75D52584;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -530,6 +699,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TT75D52584;
 				INFOPLIST_FILE = Smack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,6 +716,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		540843B021E5AB830002A2AD /* Build configuration list for PBXNativeTarget "SmackUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				540843B121E5AB830002A2AD /* Debug */,
+				540843B221E5AB830002A2AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		542212AD21C1EA1F009146DA /* Build configuration list for PBXProject "Smack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
