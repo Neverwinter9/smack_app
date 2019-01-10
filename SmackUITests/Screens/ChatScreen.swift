@@ -10,6 +10,7 @@ import XCTest
 
 class ChatScreen: BaseScreen {
     
+    // XCUIElements
     let overflowMenuBtn = app.buttons["Overflow menu button"]
     let messageTxtFiled = app.textFields["Message text field"]
     let sendBtn = app.buttons["Send button"]
@@ -29,11 +30,9 @@ class ChatScreen: BaseScreen {
         type("some text", in: messageTxtFiled)
         tap(sendBtn)
     }
-    
 }
 
 // MARK: - Visibility
-
 extension ChatScreen {
     private func isVisible() {
         XCTAssert(messageTxtFiled.waitForExistence(timeout: timeout), "ChatScreen is not visible")

@@ -10,6 +10,7 @@ import XCTest
 
 class CreateChannelScreen: BaseScreen {
     
+    // XCUIElements
     let nameTxtField = app.textFields["Channel name text field"]
     let descTxtField = app.textFields["Channel description text field"]
     let createChannelBtn = app.buttons["Create channel button"]
@@ -26,10 +27,9 @@ class CreateChannelScreen: BaseScreen {
         tap(createChannelBtn)
         return ChannelScreen()
     }
-    
-// MARK: - Visibility
 }
 
+// MARK: - Visibility
 extension CreateChannelScreen {
     private func isVisible() {
         XCTAssert(createChannelBtn.waitForExistence(timeout: timeout), "CreateChannelScreen is not visible")

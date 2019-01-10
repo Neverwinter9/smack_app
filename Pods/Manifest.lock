@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.8.0)
+  - Embassy (4.0.8)
+  - EnvoyAmbassador (4.0.5):
+    - Embassy (~> 4.0)
   - Socket.IO-Client-Swift (13.4.0):
     - Starscream (~> 3.0.2)
   - Starscream (3.0.6)
@@ -7,22 +10,28 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Embassy (~> 4.0)
+  - EnvoyAmbassador (~> 4.0)
   - Socket.IO-Client-Swift
   - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Embassy
+    - EnvoyAmbassador
     - Socket.IO-Client-Swift
     - Starscream
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Embassy: fe6a3f8dd2d705881c172dcb144fb97b9408f4cd
+  EnvoyAmbassador: 21cef10e70d003801c68ba5281948684a4e25486
   Socket.IO-Client-Swift: 2b2720f14c92ff1237ced09bc2f2da2022624fee
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 168657bbd1c9d7f85a3e716337217063025ce276
+PODFILE CHECKSUM: ceec88677d466c3cdfcfaa4805be5ed3f3478578
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

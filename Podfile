@@ -13,3 +13,9 @@ target 'Smack' do
   pod 'Socket.IO-Client-Swift'
 
 end
+
+target "SmackUITests" do
+    pod 'EnvoyAmbassador', '~>4.0'
+    pod 'Embassy', '~>4.0'
+    
+end

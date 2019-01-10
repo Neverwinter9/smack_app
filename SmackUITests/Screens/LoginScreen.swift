@@ -10,8 +10,9 @@ import XCTest
 
 class LoginScreen: BaseScreen {
     
+    // XCUIElements
     let loginBtn = app.buttons["Login button"]
-    let signupBtn = app.buttons["Sigh up button"]
+    let signupBtn = app.buttons["Sign up button"]
     let emailTxtBox = app.textFields["Email text field"]
     let passTxtBox = app.secureTextFields["Password text field"]
     
@@ -20,16 +21,16 @@ class LoginScreen: BaseScreen {
         isVisible()
     }
     
-    func loginAUser() {
+    func loginAUser(email: String, password: String) -> ChannelScreen {
         emailTxtBox.clear()
-        type(TestUser.email, in: emailTxtBox)
-        type(TestUser.password, in: passTxtBox)
+        type(email, in: emailTxtBox)
+        type(password, in: passTxtBox)
         tap(loginBtn)
+        return ChannelScreen()
     }
 }
 
 // MARK: - Visibility
-
 extension LoginScreen {
     private func isVisible() {
         XCTAssert(signupBtn.waitForExistence(timeout: timeout), "LoginScreen is not visible")
@@ -37,4 +38,4 @@ extension LoginScreen {
 }
 
 // MARK: - Close Btn Proto
-extension LoginScreen: CloseProtocol {}
+// extension LoginScreen: CloseProtocol {}

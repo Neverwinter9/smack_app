@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D7245E97C69F6D1BD08FEF3 /* libPods-SmackUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF60C7FC9D8C94F2BD2BFFE6 /* libPods-SmackUITests.a */; };
 		535FCBFD3462FE5293E021CF /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751667BC04167F82D1810DD8 /* Pods_Smack.framework */; };
 		540843AC21E5AB830002A2AD /* BaseScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843AB21E5AB830002A2AD /* BaseScreen.swift */; };
 		540843B621E5B1690002A2AD /* ChatScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843B521E5B1690002A2AD /* ChatScreen.swift */; };
@@ -16,6 +17,13 @@
 		540843BF21E5F4320002A2AD /* CreateChannelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843BE21E5F4320002A2AD /* CreateChannelScreen.swift */; };
 		540843C121E5F8BD0002A2AD /* ClearTxtFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C021E5F8BD0002A2AD /* ClearTxtFieldExtension.swift */; };
 		540843C321E6055C0002A2AD /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C221E6055C0002A2AD /* TestUser.swift */; };
+		540843C521E6C9030002A2AD /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C421E6C9030002A2AD /* ProfileScreen.swift */; };
+		540843C721E6CD040002A2AD /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C621E6CD040002A2AD /* SignUpScreen.swift */; };
+		540843C921E6D0830002A2AD /* ChooseAvatarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C821E6D0830002A2AD /* ChooseAvatarScreen.swift */; };
+		540843CB21E6E2EC0002A2AD /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843CA21E6E2EC0002A2AD /* LoginTest.swift */; };
+		540843CD21E6E8CB0002A2AD /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843CC21E6E8CB0002A2AD /* BaseTest.swift */; };
+		540843D021E73B5B0002A2AD /* SmackMockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843CF21E73B5B0002A2AD /* SmackMockRouter.swift */; };
+		540843D221E741020002A2AD /* BaseStubTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843D121E741020002A2AD /* BaseStubTest.swift */; };
 		542212B621C1EA1F009146DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542212B521C1EA1F009146DA /* AppDelegate.swift */; };
 		542212BB21C1EA1F009146DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542212B921C1EA1F009146DA /* Main.storyboard */; };
 		542212BD21C1EA20009146DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542212BC21C1EA20009146DA /* Assets.xcassets */; };
@@ -67,6 +75,13 @@
 		540843BE21E5F4320002A2AD /* CreateChannelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelScreen.swift; sourceTree = "<group>"; };
 		540843C021E5F8BD0002A2AD /* ClearTxtFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTxtFieldExtension.swift; sourceTree = "<group>"; };
 		540843C221E6055C0002A2AD /* TestUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
+		540843C421E6C9030002A2AD /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		540843C621E6CD040002A2AD /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		540843C821E6D0830002A2AD /* ChooseAvatarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAvatarScreen.swift; sourceTree = "<group>"; };
+		540843CA21E6E2EC0002A2AD /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		540843CC21E6E8CB0002A2AD /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
+		540843CF21E73B5B0002A2AD /* SmackMockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmackMockRouter.swift; sourceTree = "<group>"; };
+		540843D121E741020002A2AD /* BaseStubTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStubTest.swift; sourceTree = "<group>"; };
 		542212B221C1EA1F009146DA /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		542212B521C1EA1F009146DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		542212BA21C1EA1F009146DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,6 +116,9 @@
 		54FE24DA21E215E30021E68D /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		751667BC04167F82D1810DD8 /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C98DCEBECDCA4A9ACF1CDE /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
+		B83788C96256105907BC0A03 /* Pods-SmackUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmackUITests/Pods-SmackUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BDB76A305DF3DD99A3104378 /* Pods-SmackUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmackUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmackUITests/Pods-SmackUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CF60C7FC9D8C94F2BD2BFFE6 /* libPods-SmackUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmackUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7485A711F423BB97377D23B /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7245E97C69F6D1BD08FEF3 /* libPods-SmackUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +147,8 @@
 			children = (
 				E7485A711F423BB97377D23B /* Pods-Smack.debug.xcconfig */,
 				88C98DCEBECDCA4A9ACF1CDE /* Pods-Smack.release.xcconfig */,
+				BDB76A305DF3DD99A3104378 /* Pods-SmackUITests.debug.xcconfig */,
+				B83788C96256105907BC0A03 /* Pods-SmackUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -150,7 +171,10 @@
 				540843B521E5B1690002A2AD /* ChatScreen.swift */,
 				540843B721E5E4150002A2AD /* ChannelScreen.swift */,
 				540843BE21E5F4320002A2AD /* CreateChannelScreen.swift */,
+				540843C421E6C9030002A2AD /* ProfileScreen.swift */,
 				540843B921E5E87F0002A2AD /* LoginScreen.swift */,
+				540843C621E6CD040002A2AD /* SignUpScreen.swift */,
+				540843C821E6D0830002A2AD /* ChooseAvatarScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -158,6 +182,8 @@
 		540843B421E5ADD20002A2AD /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				540843CA21E6E2EC0002A2AD /* LoginTest.swift */,
+				540843CC21E6E8CB0002A2AD /* BaseTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -165,11 +191,21 @@
 		540843BB21E5EF7B0002A2AD /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				540843CE21E73B290002A2AD /* Stub */,
 				540843BC21E5EFA00002A2AD /* CloseButtonExtension.swift */,
 				540843C021E5F8BD0002A2AD /* ClearTxtFieldExtension.swift */,
 				540843C221E6055C0002A2AD /* TestUser.swift */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		540843CE21E73B290002A2AD /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				540843CF21E73B5B0002A2AD /* SmackMockRouter.swift */,
+				540843D121E741020002A2AD /* BaseStubTest.swift */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 		542212A921C1EA1F009146DA = {
@@ -290,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				751667BC04167F82D1810DD8 /* Pods_Smack.framework */,
+				CF60C7FC9D8C94F2BD2BFFE6 /* libPods-SmackUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -301,6 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 540843B021E5AB830002A2AD /* Build configuration list for PBXNativeTarget "SmackUITests" */;
 			buildPhases = (
+				F369FC73A355B104FC8CBBA0 /* [CP] Check Pods Manifest.lock */,
 				540843A521E5AB830002A2AD /* Sources */,
 				540843A621E5AB830002A2AD /* Frameworks */,
 				540843A721E5AB830002A2AD /* Resources */,
@@ -438,6 +476,28 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smack/Pods-Smack-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F369FC73A355B104FC8CBBA0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmackUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -445,12 +505,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				540843CD21E6E8CB0002A2AD /* BaseTest.swift in Sources */,
+				540843D221E741020002A2AD /* BaseStubTest.swift in Sources */,
 				540843C321E6055C0002A2AD /* TestUser.swift in Sources */,
+				540843D021E73B5B0002A2AD /* SmackMockRouter.swift in Sources */,
 				540843B821E5E4150002A2AD /* ChannelScreen.swift in Sources */,
 				540843C121E5F8BD0002A2AD /* ClearTxtFieldExtension.swift in Sources */,
+				540843CB21E6E2EC0002A2AD /* LoginTest.swift in Sources */,
 				540843BF21E5F4320002A2AD /* CreateChannelScreen.swift in Sources */,
+				540843C521E6C9030002A2AD /* ProfileScreen.swift in Sources */,
+				540843C721E6CD040002A2AD /* SignUpScreen.swift in Sources */,
 				540843BD21E5EFA00002A2AD /* CloseButtonExtension.swift in Sources */,
 				540843BA21E5E87F0002A2AD /* LoginScreen.swift in Sources */,
+				540843C921E6D0830002A2AD /* ChooseAvatarScreen.swift in Sources */,
 				540843AC21E5AB830002A2AD /* BaseScreen.swift in Sources */,
 				540843B621E5B1690002A2AD /* ChatScreen.swift in Sources */,
 			);
@@ -518,6 +585,7 @@
 /* Begin XCBuildConfiguration section */
 		540843B121E5AB830002A2AD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDB76A305DF3DD99A3104378 /* Pods-SmackUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT75D52584;
@@ -537,6 +605,7 @@
 		};
 		540843B221E5AB830002A2AD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83788C96256105907BC0A03 /* Pods-SmackUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TT75D52584;
