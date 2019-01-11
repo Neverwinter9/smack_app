@@ -13,9 +13,16 @@ class BaseScreen {
     static let app = XCUIApplication()
     let timeout: TimeInterval = 5
     
+    
     // Gestures
     func tap(_ element: XCUIElement) {
         element.tap()
+    }
+    
+    func tapCoordinate(at xCoordinate: Double, and yCoordinate: Double) {
+        let normalized = BaseScreen.app.coordinate(withNormalizedOffset: CGVector(dx: 0, dy: 0))
+        let coordinate = normalized.withOffset(CGVector(dx: xCoordinate, dy: yCoordinate))
+        coordinate.tap()
     }
     
     func swipeDown(_ element: XCUIElement) {

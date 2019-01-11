@@ -17,7 +17,7 @@ class CreateChannelScreen: BaseScreen {
     
     override init() {
         super.init()
-        isVisible()
+       //isVisible()
     }
     
     func createNewChannel() -> ChannelScreen{
@@ -30,11 +30,11 @@ class CreateChannelScreen: BaseScreen {
 }
 
 // MARK: - Visibility
-extension CreateChannelScreen {
-    private func isVisible() {
-        XCTAssert(createChannelBtn.waitForExistence(timeout: timeout), "CreateChannelScreen is not visible")
-    }
-}
+//extension CreateChannelScreen {
+//    private func isVisible() {
+//        XCTAssert(createChannelBtn.waitForExistence(timeout: timeout), "CreateChannelScreen is not visible")
+//    }
+//}
 
 // MARK: - Close Btn Proto
 extension CreateChannelScreen: CloseProtocol {}

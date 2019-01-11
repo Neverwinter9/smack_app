@@ -12,10 +12,13 @@ class LoginTest: BaseTest {
     
     func testLoginAUser() {
         
+        // Test steps
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.navigateToChannelScreen()
         let loginScreen = channelScreen.tapOnLogin()
         let channelScreen2 = loginScreen.loginAUser(email: TestUser.email, password: TestUser.password)
+        
+        //Expected result
         XCTAssertTrue(channelScreen2.isLoggedIn(label: TestUser.username), "User isn't logged in")
     }
 }

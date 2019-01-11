@@ -14,6 +14,7 @@ class ChatScreen: BaseScreen {
     let overflowMenuBtn = app.buttons["Overflow menu button"]
     let messageTxtFiled = app.textFields["Message text field"]
     let sendBtn = app.buttons["Send button"]
+    let messageCell = app.cells["Message cell"]
     
     override init() {
         super.init()
@@ -29,6 +30,12 @@ class ChatScreen: BaseScreen {
         messageTxtFiled.clear()
         type("some text", in: messageTxtFiled)
         tap(sendBtn)
+    }
+    
+    func sendBtnIsHidden() {
+        messageTxtFiled.clear()
+        type("some text", in: messageTxtFiled)
+        tapCoordinate(at: 50, and: 50)
     }
 }
 

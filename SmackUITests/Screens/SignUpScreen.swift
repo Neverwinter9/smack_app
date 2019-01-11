@@ -29,14 +29,20 @@ class SignUpScreen: BaseScreen {
     }
     
     func createAnAccount() -> ChannelScreen{
+        tap(genBackgroundColorBtn)
         userNameTxtBox.clear()
         emailTxtBox.clear()
-        type(TestUser.username, in: userNameTxtBox)
-        type(TestUser.email, in: emailTxtBox)
-        type(TestUser.password, in: passTxtBox)
-        tap(chooseAvatarBtn)
+        type(randomString(length: 5), in: userNameTxtBox)
+        type(randomString(length: 5), in: emailTxtBox)
+        type(randomString(length: 5), in: passTxtBox)
+        tapCoordinate(at: 20, and: 20)
         tap(createAcntBtn)
         return ChannelScreen()
+    }
+    
+    func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return String((0...length-1).map{ _ in letters.randomElement()! })
     }
 }
 

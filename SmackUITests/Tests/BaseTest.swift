@@ -11,6 +11,7 @@ import XCTest
 class BaseTest: XCTestCase {
     
     let app = XCUIApplication()
+    let timeout: TimeInterval = 3
     
     override func setUp() {
         continueAfterFailure = false

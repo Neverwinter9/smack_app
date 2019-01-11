@@ -28,6 +28,11 @@ class LoginScreen: BaseScreen {
         tap(loginBtn)
         return ChannelScreen()
     }
+    
+    func tapOnSignUp() -> SignUpScreen {
+        tap(signupBtn)
+        return SignUpScreen()
+    }
 }
 
 // MARK: - Visibility

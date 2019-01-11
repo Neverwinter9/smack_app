@@ -11,7 +11,7 @@ import XCTest
 class ChooseAvatarScreen: BaseScreen {
     
     // XCUIElements
-    let avatarCell = app.cells["Avatar cell"]
+    let avatarCell = app.collectionViews.cells.matching(identifier: "Avatar cell").otherElements.containing(.image, identifier:"dark1").element
     let backBtn = app.buttons["Back button"]
     
     override init() {

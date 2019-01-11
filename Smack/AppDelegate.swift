@@ -22,6 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDataService.instance.logoutUser()
             NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         }
+        
+//        if ProcessInfo.processInfo.arguments.contains("noAuth") {
+//            let userId = "1"
+//            let color = "[0.8509803921568627, 0.6745098039215687, 0.21568627450980393, 1]"
+//            let avatarName = "dark2"
+//            let email = "test@test.com"
+//            let name = "FakeUser"
+//            UserDataService.instance.setUserData(id: userId, color: color, avatarName: avatarName, email: email, name: name)
+//        }
+        
         return true
     }
     

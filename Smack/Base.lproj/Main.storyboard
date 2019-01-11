@@ -151,6 +151,9 @@
                                                 <constraint firstItem="VCn-gs-HBu" firstAttribute="top" secondItem="syI-sZ-3nC" secondAttribute="top" id="m2T-Mk-G3N"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Message Cell"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="messageBodyLbl" destination="rjr-zA-g8A" id="GYw-Ty-4yg"/>
                                             <outlet property="timeStampLbl" destination="X68-VF-87w" id="rJh-gd-c95"/>
@@ -241,6 +244,9 @@
                                     <constraint firstAttribute="width" constant="75" id="M2B-vo-rQx"/>
                                     <constraint firstAttribute="height" constant="75" id="OAj-CU-I9O"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="User avatar"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1y9-DY-qKr">
                                 <rect key="frame" x="0.0" y="125" width="375" height="427"/>
@@ -501,10 +507,10 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Create account button"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="Create account button"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createAccountPressed:" destination="dzT-F8-gHd" eventType="touchUpInside" id="NO2-8Y-2Sh"/>

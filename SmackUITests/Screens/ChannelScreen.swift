@@ -12,12 +12,19 @@ class ChannelScreen: BaseScreen {
     
     // XCUIElements
     let loginBtn = app.buttons["Login button"]
+    let userPic = app.images["User avatar"]
     let addChannelBtn = app/*@START_MENU_TOKEN@*/.buttons["Add channel button"]/*[[".buttons[\"addChannelButton\"]",".buttons[\"Add channel button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
     let channelCell = app.cells["Channel cell"]
+    let overflowMenuBtn = app.buttons["Overflow menu button"]
     
     override init() {
         super.init()
         isVisible()
+    }
+    
+    func navigateToChatScreen() -> ChatScreen {
+        tap(overflowMenuBtn)
+        return ChatScreen()
     }
     
     func tapOnLogin() -> LoginScreen {
@@ -25,8 +32,14 @@ class ChannelScreen: BaseScreen {
         return LoginScreen()
     }
     
-    func tapOnAddChannel() {
+    func tapOnProfile() -> ProfileScreen {
+        tap(loginBtn)
+        return ProfileScreen()
+    }
+    
+    func tapOnAddChannel() -> CreateChannelScreen {
         tap(addChannelBtn)
+        return CreateChannelScreen()
     }
     
     func tapOnChannel() -> ChatScreen {
