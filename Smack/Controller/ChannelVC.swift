@@ -53,6 +53,8 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             let addChannel = AddChannelVC()
             addChannel.modalPresentationStyle = .custom
             present(addChannel, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
         }
     }
     

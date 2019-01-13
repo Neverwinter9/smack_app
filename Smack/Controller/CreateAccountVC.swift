@@ -16,6 +16,7 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var passTxt: UITextField!
     @IBOutlet weak var userImg: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var disclaimer: UILabel!
     
     // Variables
     var avatarName = "profileDefault"
@@ -38,12 +39,19 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {
-        spinner.isHidden = false
-        spinner.startAnimating()
+        
+        if usernameTxt.text == "" || emailTxt.text == "" || passTxt.text == "" {
+            disclaimer.isHidden = false
+            spinner.isHidden = true
+        } else {
+            disclaimer.isHidden = true
+            spinner.isHidden = false
+            spinner.startAnimating()
+        }
         
         guard let name = usernameTxt.text , usernameTxt.text != "" else { return }
         guard let email = emailTxt.text , emailTxt.text != "" else { return }
-        guard let pass = passTxt.text , emailTxt.text != "" else { return }
+        guard let pass = passTxt.text , passTxt.text != "" else { return }
         
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
             if success {
@@ -87,6 +95,7 @@ class CreateAccountVC: UIViewController {
     func setupView() {
         // Loading spinner
         spinner.isHidden = true
+        disclaimer.isHidden = true
         
         // Custom placeholders
         usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor: smackPurplePlaceholder])

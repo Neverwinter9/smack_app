@@ -15,6 +15,8 @@ class LoginVC: UIViewController {
     @IBOutlet weak var emailTxt: UITextField!
     @IBOutlet weak var passwordTxt: UITextField!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
+    @IBOutlet weak var loginBtn: RoundedButton!
+    @IBOutlet weak var disclaimer: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +25,18 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: Any) {
-        spinner.isHidden = false
-        spinner.startAnimating()
+        
+        if emailTxt.text == "" || passwordTxt.text == "" {
+            disclaimer.isHidden = false
+            spinner.isHidden = true
+        } else {
+            disclaimer.isHidden = true
+            spinner.isHidden = false
+            spinner.startAnimating()
+        }
         
         guard let email = emailTxt.text , emailTxt.text != "" else { return }
         guard let pass = passwordTxt.text , passwordTxt.text != "" else { return }
-        
         
         AuthService.instance.loginUser(email: email, password: pass) { (success) in
             if success {
@@ -42,7 +50,6 @@ class LoginVC: UIViewController {
                 })
             }
         }
-        
     }
     
     @IBAction func closePressed(_ sender: Any) {
@@ -56,6 +63,7 @@ class LoginVC: UIViewController {
     func setupView() {
         // Loading spinner
         spinner.isHidden = true
+        disclaimer.isHidden = true
         
         // Custom placeholders
         emailTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor: smackPurplePlaceholder])
