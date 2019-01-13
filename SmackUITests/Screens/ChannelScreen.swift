@@ -42,8 +42,9 @@ class ChannelScreen: BaseScreen {
         return CreateChannelScreen()
     }
     
-    func tapOnChannel() -> ChatScreen {
-        tap(channelCell)
+    func tapOnChannel(channelName: String) -> ChatScreen {
+        let channel = BaseScreen.app.tables.staticTexts["#\(channelName)"]
+        tap(channel)
         return ChatScreen()
     }
     

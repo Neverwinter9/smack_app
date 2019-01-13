@@ -11,8 +11,9 @@ import XCTest
 class ChooseAvatarScreen: BaseScreen {
     
     // XCUIElements
-    let avatarCell = app.collectionViews.cells.matching(identifier: "Avatar cell").otherElements.containing(.image, identifier:"dark1").element
+    let avatarCellDark = app.collectionViews.cells.matching(identifier: "Avatar cell").otherElements.containing(.image, identifier:"dark\(avatarIds.randomElement()!.description)").element
     let backBtn = app.buttons["Back button"]
+    static let avatarIds = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     
     override init() {
         super.init()
@@ -20,7 +21,7 @@ class ChooseAvatarScreen: BaseScreen {
     }
     
     func chooseAvatar() -> SignUpScreen{
-        tap(avatarCell)
+        tap(avatarCellDark)
         return SignUpScreen()
     }
     
@@ -33,7 +34,7 @@ class ChooseAvatarScreen: BaseScreen {
 // MARK: - Visibility
 extension ChooseAvatarScreen {
     private func isVisible() {
-        XCTAssert(avatarCell.waitForExistence(timeout: timeout), "ChooseAvatarSell is not visible")
+        XCTAssert(avatarCellDark.waitForExistence(timeout: timeout), "ChooseAvatarSell is not visible")
     }
 }
 

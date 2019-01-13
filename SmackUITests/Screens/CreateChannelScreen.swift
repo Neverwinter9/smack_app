@@ -20,10 +20,10 @@ class CreateChannelScreen: BaseScreen {
        //isVisible()
     }
     
-    func createNewChannel() -> ChannelScreen{
+    func createNewChannel(channelName: String, channelDesc: String) -> ChannelScreen{
         nameTxtField.clear()
-        type("test", in: nameTxtField)
-        type("", in: descTxtField)
+        type(channelName, in: nameTxtField)
+        type(channelDesc, in: descTxtField)
         tap(createChannelBtn)
         return ChannelScreen()
     }

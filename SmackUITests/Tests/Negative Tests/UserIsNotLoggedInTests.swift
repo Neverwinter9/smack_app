@@ -16,7 +16,7 @@ class UserIsNotLoggedInTests: BaseTest {
         let chatScreen = ChatScreen()
         
         // Expected result
-        XCTAssertFalse(chatScreen.messageCell.waitForExistence(timeout: timeout), "Message is shown when it shouldn't")
+        XCTAssertFalse(chatScreen.messageCell.exists, "Message is shown when it shouldn't")
     }
     
     func testChannelIsNotVisible() {
@@ -26,7 +26,7 @@ class UserIsNotLoggedInTests: BaseTest {
         let channelScreen = chatScreen.navigateToChannelScreen()
         
         // Expected result
-        XCTAssertFalse(channelScreen.channelCell.waitForExistence(timeout: timeout), "Channel is shown when it shouldn't")
+        XCTAssertFalse(channelScreen.channelCell.exists, "Channel is shown when it shouldn't")
     }
     
     func testSendBtnIsHidden() {
@@ -36,7 +36,7 @@ class UserIsNotLoggedInTests: BaseTest {
         chatScreen.sendBtnIsHidden()
         
         // Expected result
-        XCTAssertFalse(chatScreen.sendBtn.waitForExistence(timeout: timeout), "SendBtn is shown when it shouldn't")
+        XCTAssertFalse(chatScreen.sendBtn.exists, "SendBtn is shown when it shouldn't")
     }
     
     func testAddChannelBtnIsDisabled() {
@@ -47,7 +47,7 @@ class UserIsNotLoggedInTests: BaseTest {
         let createChannelScreen = channelScreen.tapOnAddChannel()
         
         // Expected result
-        XCTAssertFalse(createChannelScreen.createChannelBtn.waitForExistence(timeout: timeout), "CreateChannelScreen is shown when it shouldn't")
+        XCTAssertFalse(createChannelScreen.createChannelBtn.exists, "CreateChannelScreen is shown when it shouldn't")
     }
     
     

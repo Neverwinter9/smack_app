@@ -1,5 +1,5 @@
 //
-//  TestUser.swift
+//  TestUserStatic.swift
 //  SmackUITests
 //
 //  Created by Pavel Ponomarev on 1/9/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TestUser {
+struct TestUserStatic {
     static let username = "TestUser"
     static let email = "test@user.com"
     static let password = "12345"

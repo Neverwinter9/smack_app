@@ -12,6 +12,8 @@ class BaseTest: XCTestCase {
     
     let app = XCUIApplication()
     let timeout: TimeInterval = 3
+    let randomMessage = RandomStringExtension.init().randomString(length: 10)
+    let randomMessageOversized = RandomStringExtension.init().randomString(length: 200)
     
     override func setUp() {
         continueAfterFailure = false

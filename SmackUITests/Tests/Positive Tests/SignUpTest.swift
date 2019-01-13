@@ -11,14 +11,19 @@ import XCTest
 class SignUpTest: BaseTest {
     
     func testSignUp() {
+        
+        // Test steps
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.navigateToChannelScreen()
         let loginScreen = channelScreen.tapOnLogin()
         let signUpScreen = loginScreen.tapOnSignUp()
         let chooseAvatarScreen = signUpScreen.tapOnChooseAvatar()
-        let singUpScreen2 = chooseAvatarScreen.chooseAvatar()
-        let channelScreen2 = singUpScreen2.createAnAccount()
-        let profileScreen = channelScreen2.tapOnProfile()
-        XCTAssertTrue(profileScreen.logoutBtn.waitForExistence(timeout: timeout))
+        let singUpScreenWithAvatar = chooseAvatarScreen.chooseAvatar()
+        let channelScreenLoggedIn = singUpScreenWithAvatar.createAnAccount(name: TestUserDynamic.username, email: TestUserDynamic.email, pass: TestUserDynamic.password)
+        //let profileScreen = channelScreenLoggedIn.tapOnProfile()
+        
+        // Expected result
+        // XCTAssertTrue(profileScreen.logoutBtn.waitForExistence(timeout: timeout), "User account isn't created")
+        XCTAssertTrue(channelScreenLoggedIn.isLoggedIn(label: TestUserDynamic.username), "User is still logged in")
     }
 }

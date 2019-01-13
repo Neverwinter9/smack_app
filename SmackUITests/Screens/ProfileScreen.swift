@@ -18,7 +18,7 @@ class ProfileScreen: BaseScreen {
         isVisible()
     }
     
-    func logoutAUser() -> ChannelScreen{
+    func tapOnLogout() -> ChannelScreen{
         tap(logoutBtn)
         return ChannelScreen()
     }

@@ -1,24 +1,25 @@
 //
-//  LoginTest.swift
+//  SelectAChannelTest.swift
 //  SmackUITests
 //
-//  Created by Pavel Ponomarev on 1/9/19.
+//  Created by Pavel Ponomarev on 1/12/19.
 //  Copyright © 2019 Pavel Ponomarev. All rights reserved.
 //
 
 import XCTest
 
-class LoginTest: BaseTest {
+class SelectAChannelTest: BaseTest {
     
-    func testLoginAUser() {
+    func testSelectAChannel() {
         
         // Test steps
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.navigateToChannelScreen()
         let loginScreen = channelScreen.tapOnLogin()
         let channelScreenLoggedIn = loginScreen.loginAUser(email: TestUserStatic.email, password: TestUserStatic.password)
+        let chatScreenChannelSelected = channelScreenLoggedIn.tapOnChannel(channelName: "general")
         
         // Expected result
-        XCTAssertTrue(channelScreenLoggedIn.isLoggedIn(label: TestUserStatic.username), "User isn't logged in")
+        XCTAssert(app.staticTexts["#general"].exists, "A channel hasn't been selected")
     }
 }

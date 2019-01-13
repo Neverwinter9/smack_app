@@ -26,9 +26,9 @@ class ChatScreen: BaseScreen {
         return ChannelScreen()
     }
     
-    func sendAMessage() {
+    func sendAMessage(msgText: String) {
         messageTxtFiled.clear()
-        type("some text", in: messageTxtFiled)
+        type(msgText, in: messageTxtFiled)
         tap(sendBtn)
     }
     
