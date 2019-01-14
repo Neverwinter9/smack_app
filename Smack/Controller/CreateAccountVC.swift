@@ -17,6 +17,7 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var userImg: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     @IBOutlet weak var disclaimer: UILabel!
+    @IBOutlet weak var invalidEmailDisclaimer: UILabel!
     
     // Variables
     var avatarName = "profileDefault"
@@ -38,6 +39,14 @@ class CreateAccountVC: UIViewController {
         }
     }
     
+    // Email format validator
+    func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
+    
     @IBAction func createAccountPressed(_ sender: Any) {
         
         if usernameTxt.text == "" || emailTxt.text == "" || passTxt.text == "" {
@@ -49,8 +58,17 @@ class CreateAccountVC: UIViewController {
             spinner.startAnimating()
         }
         
+        if isValidEmail(testStr: emailTxt.text!) == false {
+            invalidEmailDisclaimer.isHidden = false
+            spinner.isHidden = true
+        } else {
+            invalidEmailDisclaimer.isHidden = true
+            spinner.isHidden = false
+            spinner.startAnimating()
+        }
+        
         guard let name = usernameTxt.text , usernameTxt.text != "" else { return }
-        guard let email = emailTxt.text , emailTxt.text != "" else { return }
+        guard let email = emailTxt.text , emailTxt.text != "" && isValidEmail(testStr: emailTxt.text!) else { return }
         guard let pass = passTxt.text , passTxt.text != "" else { return }
         
         AuthService.instance.registerUser(email: email, password: pass) { (success) in
@@ -96,6 +114,7 @@ class CreateAccountVC: UIViewController {
         // Loading spinner
         spinner.isHidden = true
         disclaimer.isHidden = true
+        invalidEmailDisclaimer.isHidden = true
         
         // Custom placeholders
         usernameTxt.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedString.Key.foregroundColor: smackPurplePlaceholder])

@@ -360,7 +360,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iBT-zu-pAj">
-                                <rect key="frame" x="88" y="366.5" width="199" height="26"/>
+                                <rect key="frame" x="88" y="397" width="199" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <state key="normal" title="Don't have an account? Sign up here">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -383,7 +383,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="6uv-ox-OL5">
-                                <rect key="frame" x="62.5" y="160" width="250" height="116.5"/>
+                                <rect key="frame" x="62.5" y="160" width="250" height="147"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h3l-9s-duL" userLabel="Email Txt">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
@@ -431,14 +431,22 @@
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid format of email you entered!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Le4-Wd-mde">
+                                        <rect key="frame" x="0.0" y="130.5" width="250" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="Le4-Wd-mde" firstAttribute="centerX" secondItem="6uv-ox-OL5" secondAttribute="centerX" id="B8o-7a-l3B"/>
                                     <constraint firstItem="j28-jR-v83" firstAttribute="centerX" secondItem="6uv-ox-OL5" secondAttribute="centerX" id="PZN-UB-V3P"/>
                                     <constraint firstItem="j28-jR-v83" firstAttribute="top" secondItem="S95-Ar-MDn" secondAttribute="bottom" constant="14" id="doR-vR-H5J"/>
+                                    <constraint firstItem="Le4-Wd-mde" firstAttribute="top" secondItem="j28-jR-v83" secondAttribute="bottom" constant="14" id="khU-aO-IJX"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXa-EH-UJc" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
-                                <rect key="frame" x="62.5" y="316.5" width="250" height="50"/>
+                                <rect key="frame" x="62.5" y="347" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="hqE-Ne-EwB"/>
@@ -482,6 +490,7 @@
                     <connections>
                         <outlet property="disclaimer" destination="j28-jR-v83" id="uv5-eA-W5S"/>
                         <outlet property="emailTxt" destination="h3l-9s-duL" id="Rv1-Gv-WKE"/>
+                        <outlet property="invalidEmailDisclaimer" destination="Le4-Wd-mde" id="FJ6-c6-60P"/>
                         <outlet property="loginBtn" destination="kXa-EH-UJc" id="7tI-UI-VWC"/>
                         <outlet property="passwordTxt" destination="poW-Oz-92i" id="RNy-uf-eaU"/>
                         <outlet property="spinner" destination="tQs-iT-L9X" id="iKG-bE-sBV"/>
@@ -532,7 +541,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0D-nj-sy8">
-                                <rect key="frame" x="137.5" y="329.5" width="100" height="130"/>
+                                <rect key="frame" x="137.5" y="360" width="100" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="jWK-14-pXS"/>
                                 </constraints>
@@ -558,7 +567,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="dE3-Zl-4Qn">
-                                <rect key="frame" x="62.5" y="123" width="250" height="166.5"/>
+                                <rect key="frame" x="62.5" y="123" width="250" height="197"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Es6-tD-s2a">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="20"/>
@@ -626,21 +635,29 @@
                                         <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invalid format of email you entered!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEO-wb-q3C">
+                                        <rect key="frame" x="0.0" y="180.5" width="250" height="16.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="vEO-wb-q3C" firstAttribute="centerX" secondItem="dE3-Zl-4Qn" secondAttribute="centerX" id="LSG-5Z-7lZ"/>
                                     <constraint firstItem="7dy-d5-DHG" firstAttribute="top" secondItem="EvE-Xt-ghb" secondAttribute="bottom" constant="14" id="P7R-Pv-BCq"/>
                                     <constraint firstItem="7dy-d5-DHG" firstAttribute="centerX" secondItem="dE3-Zl-4Qn" secondAttribute="centerX" id="Qmi-wN-Ubl"/>
+                                    <constraint firstItem="vEO-wb-q3C" firstAttribute="top" secondItem="7dy-d5-DHG" secondAttribute="bottom" constant="14" id="SOV-9w-n60"/>
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="sVa-29-zWc" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="329.5" width="100" height="100"/>
+                                <rect key="frame" x="137.5" y="360" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="BlG-lw-6Et"/>
                                     <constraint firstAttribute="width" constant="100" id="aTU-Uk-nua"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXm-JU-z7s">
-                                <rect key="frame" x="113.5" y="464.5" width="148" height="26"/>
+                                <rect key="frame" x="113.5" y="495" width="148" height="26"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -682,6 +699,7 @@
                     <connections>
                         <outlet property="disclaimer" destination="7dy-d5-DHG" id="Zzu-H1-cP7"/>
                         <outlet property="emailTxt" destination="mOj-PP-IT9" id="QHb-3J-iO6"/>
+                        <outlet property="invalidEmailDisclaimer" destination="vEO-wb-q3C" id="b18-Nw-Z99"/>
                         <outlet property="passTxt" destination="tIr-rb-6Hk" id="GjS-pf-pW0"/>
                         <outlet property="spinner" destination="4Kn-Xv-anR" id="elB-Ej-oXB"/>
                         <outlet property="userImg" destination="sVa-29-zWc" id="ldB-RJ-h4B"/>
