@@ -16,25 +16,23 @@
 		540843BD21E5EFA00002A2AD /* CloseButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843BC21E5EFA00002A2AD /* CloseButtonExtension.swift */; };
 		540843BF21E5F4320002A2AD /* CreateChannelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843BE21E5F4320002A2AD /* CreateChannelScreen.swift */; };
 		540843C121E5F8BD0002A2AD /* ClearTxtFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C021E5F8BD0002A2AD /* ClearTxtFieldExtension.swift */; };
-		540843C321E6055C0002A2AD /* TestUserStatic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C221E6055C0002A2AD /* TestUserStatic.swift */; };
+		540843C321E6055C0002A2AD /* TestUserStatic1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C221E6055C0002A2AD /* TestUserStatic1.swift */; };
 		540843C521E6C9030002A2AD /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C421E6C9030002A2AD /* ProfileScreen.swift */; };
 		540843C721E6CD040002A2AD /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C621E6CD040002A2AD /* SignUpScreen.swift */; };
 		540843C921E6D0830002A2AD /* ChooseAvatarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843C821E6D0830002A2AD /* ChooseAvatarScreen.swift */; };
-		540843CB21E6E2EC0002A2AD /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843CA21E6E2EC0002A2AD /* LoginTest.swift */; };
+		540843CB21E6E2EC0002A2AD /* AuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843CA21E6E2EC0002A2AD /* AuthTests.swift */; };
 		540843CD21E6E8CB0002A2AD /* BaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843CC21E6E8CB0002A2AD /* BaseTest.swift */; };
 		540843D021E73B5B0002A2AD /* SmackMockRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843CF21E73B5B0002A2AD /* SmackMockRouter.swift */; };
 		540843D221E741020002A2AD /* BaseStubTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843D121E741020002A2AD /* BaseStubTest.swift */; };
 		540843D421E832CD0002A2AD /* UserIsNotLoggedInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843D321E832CD0002A2AD /* UserIsNotLoggedInTests.swift */; };
-		540843D821E87D870002A2AD /* SignUpTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843D721E87D870002A2AD /* SignUpTest.swift */; };
 		540843DA21E87F190002A2AD /* RandomStringGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843D921E87F190002A2AD /* RandomStringGenerator.swift */; };
-		540843DC21E997C40002A2AD /* LogoutTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843DB21E997C40002A2AD /* LogoutTest.swift */; };
-		540843DE21E9F5890002A2AD /* CreateAChannelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843DD21E9F5890002A2AD /* CreateAChannelTest.swift */; };
+		540843DE21E9F5890002A2AD /* ChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843DD21E9F5890002A2AD /* ChannelTests.swift */; };
 		540843E021E9F91B0002A2AD /* TestChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843DF21E9F91B0002A2AD /* TestChannel.swift */; };
 		540843E221EAD0BB0002A2AD /* TestUserDynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843E121EAD0BB0002A2AD /* TestUserDynamic.swift */; };
-		540843E421EAD9490002A2AD /* SelectAChannelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843E321EAD9490002A2AD /* SelectAChannelTest.swift */; };
-		540843E621EAEDA20002A2AD /* SendAMessageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843E521EAEDA20002A2AD /* SendAMessageTest.swift */; };
+		540843E621EAEDA20002A2AD /* MessagingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843E521EAEDA20002A2AD /* MessagingTests.swift */; };
 		540843E821EAF9750002A2AD /* BoundaryConditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843E721EAF9750002A2AD /* BoundaryConditionsTests.swift */; };
 		540843EA21EC1DBB0002A2AD /* NavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843E921EC1DBB0002A2AD /* NavigationTests.swift */; };
+		540843EC21EC31A30002A2AD /* TestUserStatic2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540843EB21EC31A30002A2AD /* TestUserStatic2.swift */; };
 		542212B621C1EA1F009146DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542212B521C1EA1F009146DA /* AppDelegate.swift */; };
 		542212BB21C1EA1F009146DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 542212B921C1EA1F009146DA /* Main.storyboard */; };
 		542212BD21C1EA20009146DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 542212BC21C1EA20009146DA /* Assets.xcassets */; };
@@ -85,25 +83,23 @@
 		540843BC21E5EFA00002A2AD /* CloseButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButtonExtension.swift; sourceTree = "<group>"; };
 		540843BE21E5F4320002A2AD /* CreateChannelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChannelScreen.swift; sourceTree = "<group>"; };
 		540843C021E5F8BD0002A2AD /* ClearTxtFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTxtFieldExtension.swift; sourceTree = "<group>"; };
-		540843C221E6055C0002A2AD /* TestUserStatic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserStatic.swift; sourceTree = "<group>"; };
+		540843C221E6055C0002A2AD /* TestUserStatic1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserStatic1.swift; sourceTree = "<group>"; };
 		540843C421E6C9030002A2AD /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
 		540843C621E6CD040002A2AD /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		540843C821E6D0830002A2AD /* ChooseAvatarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseAvatarScreen.swift; sourceTree = "<group>"; };
-		540843CA21E6E2EC0002A2AD /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		540843CA21E6E2EC0002A2AD /* AuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTests.swift; sourceTree = "<group>"; };
 		540843CC21E6E8CB0002A2AD /* BaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTest.swift; sourceTree = "<group>"; };
 		540843CF21E73B5B0002A2AD /* SmackMockRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmackMockRouter.swift; sourceTree = "<group>"; };
 		540843D121E741020002A2AD /* BaseStubTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStubTest.swift; sourceTree = "<group>"; };
 		540843D321E832CD0002A2AD /* UserIsNotLoggedInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIsNotLoggedInTests.swift; sourceTree = "<group>"; };
-		540843D721E87D870002A2AD /* SignUpTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTest.swift; sourceTree = "<group>"; };
 		540843D921E87F190002A2AD /* RandomStringGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStringGenerator.swift; sourceTree = "<group>"; };
-		540843DB21E997C40002A2AD /* LogoutTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutTest.swift; sourceTree = "<group>"; };
-		540843DD21E9F5890002A2AD /* CreateAChannelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAChannelTest.swift; sourceTree = "<group>"; };
+		540843DD21E9F5890002A2AD /* ChannelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTests.swift; sourceTree = "<group>"; };
 		540843DF21E9F91B0002A2AD /* TestChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestChannel.swift; sourceTree = "<group>"; };
 		540843E121EAD0BB0002A2AD /* TestUserDynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserDynamic.swift; sourceTree = "<group>"; };
-		540843E321EAD9490002A2AD /* SelectAChannelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAChannelTest.swift; sourceTree = "<group>"; };
-		540843E521EAEDA20002A2AD /* SendAMessageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAMessageTest.swift; sourceTree = "<group>"; };
+		540843E521EAEDA20002A2AD /* MessagingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingTests.swift; sourceTree = "<group>"; };
 		540843E721EAF9750002A2AD /* BoundaryConditionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundaryConditionsTests.swift; sourceTree = "<group>"; };
 		540843E921EC1DBB0002A2AD /* NavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTests.swift; sourceTree = "<group>"; };
+		540843EB21EC31A30002A2AD /* TestUserStatic2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUserStatic2.swift; sourceTree = "<group>"; };
 		542212B221C1EA1F009146DA /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		542212B521C1EA1F009146DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		542212BA21C1EA1F009146DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -218,7 +214,8 @@
 				540843BC21E5EFA00002A2AD /* CloseButtonExtension.swift */,
 				540843C021E5F8BD0002A2AD /* ClearTxtFieldExtension.swift */,
 				540843D921E87F190002A2AD /* RandomStringGenerator.swift */,
-				540843C221E6055C0002A2AD /* TestUserStatic.swift */,
+				540843C221E6055C0002A2AD /* TestUserStatic1.swift */,
+				540843EB21EC31A30002A2AD /* TestUserStatic2.swift */,
 				540843E121EAD0BB0002A2AD /* TestUserDynamic.swift */,
 				540843DF21E9F91B0002A2AD /* TestChannel.swift */,
 			);
@@ -246,12 +243,9 @@
 		540843D621E87CA80002A2AD /* Positive Tests */ = {
 			isa = PBXGroup;
 			children = (
-				540843CA21E6E2EC0002A2AD /* LoginTest.swift */,
-				540843DB21E997C40002A2AD /* LogoutTest.swift */,
-				540843D721E87D870002A2AD /* SignUpTest.swift */,
-				540843DD21E9F5890002A2AD /* CreateAChannelTest.swift */,
-				540843E321EAD9490002A2AD /* SelectAChannelTest.swift */,
-				540843E521EAEDA20002A2AD /* SendAMessageTest.swift */,
+				540843CA21E6E2EC0002A2AD /* AuthTests.swift */,
+				540843DD21E9F5890002A2AD /* ChannelTests.swift */,
+				540843E521EAEDA20002A2AD /* MessagingTests.swift */,
 				540843E921EC1DBB0002A2AD /* NavigationTests.swift */,
 			);
 			path = "Positive Tests";
@@ -557,29 +551,27 @@
 				540843DA21E87F190002A2AD /* RandomStringGenerator.swift in Sources */,
 				540843D421E832CD0002A2AD /* UserIsNotLoggedInTests.swift in Sources */,
 				540843CD21E6E8CB0002A2AD /* BaseTest.swift in Sources */,
-				540843E421EAD9490002A2AD /* SelectAChannelTest.swift in Sources */,
 				540843D221E741020002A2AD /* BaseStubTest.swift in Sources */,
-				540843C321E6055C0002A2AD /* TestUserStatic.swift in Sources */,
+				540843C321E6055C0002A2AD /* TestUserStatic1.swift in Sources */,
 				540843D021E73B5B0002A2AD /* SmackMockRouter.swift in Sources */,
 				540843B821E5E4150002A2AD /* ChannelScreen.swift in Sources */,
 				540843C121E5F8BD0002A2AD /* ClearTxtFieldExtension.swift in Sources */,
-				540843E621EAEDA20002A2AD /* SendAMessageTest.swift in Sources */,
+				540843E621EAEDA20002A2AD /* MessagingTests.swift in Sources */,
+				540843EC21EC31A30002A2AD /* TestUserStatic2.swift in Sources */,
 				540843E021E9F91B0002A2AD /* TestChannel.swift in Sources */,
-				540843CB21E6E2EC0002A2AD /* LoginTest.swift in Sources */,
+				540843CB21E6E2EC0002A2AD /* AuthTests.swift in Sources */,
 				540843BF21E5F4320002A2AD /* CreateChannelScreen.swift in Sources */,
 				540843EA21EC1DBB0002A2AD /* NavigationTests.swift in Sources */,
 				540843C521E6C9030002A2AD /* ProfileScreen.swift in Sources */,
-				540843D821E87D870002A2AD /* SignUpTest.swift in Sources */,
 				540843C721E6CD040002A2AD /* SignUpScreen.swift in Sources */,
 				540843BD21E5EFA00002A2AD /* CloseButtonExtension.swift in Sources */,
 				540843BA21E5E87F0002A2AD /* LoginScreen.swift in Sources */,
-				540843DE21E9F5890002A2AD /* CreateAChannelTest.swift in Sources */,
+				540843DE21E9F5890002A2AD /* ChannelTests.swift in Sources */,
 				540843C921E6D0830002A2AD /* ChooseAvatarScreen.swift in Sources */,
 				540843AC21E5AB830002A2AD /* BaseScreen.swift in Sources */,
 				540843B621E5B1690002A2AD /* ChatScreen.swift in Sources */,
 				540843E221EAD0BB0002A2AD /* TestUserDynamic.swift in Sources */,
 				540843E821EAF9750002A2AD /* BoundaryConditionsTests.swift in Sources */,
-				540843DC21E997C40002A2AD /* LogoutTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

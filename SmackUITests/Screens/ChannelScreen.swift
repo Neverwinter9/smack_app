@@ -27,6 +27,11 @@ class ChannelScreen: BaseScreen {
         return ChatScreen()
     }
     
+    func navigateToChatScreenBySwipe() -> ChatScreen {
+        swipeLeft(addChannelBtn)
+        return ChatScreen()
+    }
+    
     func tapOnLogin() -> LoginScreen {
         tap(loginBtn)
         return LoginScreen()

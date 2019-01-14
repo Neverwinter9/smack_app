@@ -16,7 +16,7 @@ class BoundaryConditionsTests: BaseTest {
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.navigateToChannelScreen()
         let loginScreen = channelScreen.tapOnLogin()
-        let channelScreenLoggedIn = loginScreen.loginAUser(email: TestUserStatic.email, password: TestUserStatic.password)
+        let channelScreenLoggedIn = loginScreen.loginAUser(email: TestUserStatic1.email, password: TestUserStatic1.password)
         let chatScreenChannelSelected = channelScreenLoggedIn.tapOnChannel(channelName: "general")
         chatScreenChannelSelected.sendAMessage(msgText: randomMessageOversized)
         sleep(3)
@@ -44,7 +44,7 @@ class BoundaryConditionsTests: BaseTest {
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.navigateToChannelScreen()
         let loginScreen = channelScreen.tapOnLogin()
-        loginScreen.loginBlancEmail(password: TestUserStatic.password)
+        loginScreen.loginBlancEmail(password: TestUserStatic1.password)
         
         // Expected result
         XCTAssert(app.staticTexts["All fields are required to be filled!"].waitForExistence(timeout: 3), "Disclaimer didn't come up")
@@ -56,7 +56,7 @@ class BoundaryConditionsTests: BaseTest {
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.navigateToChannelScreen()
         let loginScreen = channelScreen.tapOnLogin()
-        loginScreen.loginBlancPass(email: TestUserStatic.email)
+        loginScreen.loginBlancPass(email: TestUserStatic1.email)
         
         // Expected result
         XCTAssert(app.staticTexts["All fields are required to be filled!"].waitForExistence(timeout: 3), "Disclaimer didn't come up")

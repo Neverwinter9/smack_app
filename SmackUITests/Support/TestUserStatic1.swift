@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TestUserStatic {
+struct TestUserStatic1 {
     static let username = "TestUser"
     static let email = "test@user.com"
     static let password = "12345"

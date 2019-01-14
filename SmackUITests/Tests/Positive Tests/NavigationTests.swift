@@ -41,7 +41,7 @@ class NavigationTests: BaseTest {
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.navigateToChannelScreen()
         let loginScreen = channelScreen.tapOnLogin()
-        let channelScreenLoggedIn = loginScreen.loginAUser(email: TestUserStatic.email, password: TestUserStatic.password)
+        let channelScreenLoggedIn = loginScreen.loginAUser(email: TestUserStatic1.email, password: TestUserStatic1.password)
         let createChannelScreen = channelScreenLoggedIn.tapOnAddChannel()
         let channelScreenCreateAChannelClosed = createChannelScreen.tapOnCloseButton()
         
@@ -55,7 +55,7 @@ class NavigationTests: BaseTest {
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.navigateToChannelScreen()
         let loginScreen = channelScreen.tapOnLogin()
-        let channelScreenLoggedIn = loginScreen.loginAUser(email: TestUserStatic.email, password: TestUserStatic.password)
+        let channelScreenLoggedIn = loginScreen.loginAUser(email: TestUserStatic1.email, password: TestUserStatic1.password)
         let profileScreen = channelScreenLoggedIn.tapOnProfile()
         let channelScreenProfileClosed = profileScreen.tapOnCloseButton()
         
@@ -74,6 +74,27 @@ class NavigationTests: BaseTest {
         let signUpScreenBackFromAvatarPicker = chooseAvatarScreen.tapOnBackBtn()
             
         // Expected result
-        XCTAssert(signUpScreenBackFromAvatarPicker.createAcntBtn.waitForExistence(timeout: timeout), "Close Profile screen segue failed")
+        XCTAssert(signUpScreenBackFromAvatarPicker.createAcntBtn.waitForExistence(timeout: timeout), "Back from AvatarPicker screen segue failed")
+    }
+    
+    func testOpenChannelScreenBySwipe() {
+        
+        // Test steps
+        let chatScreen = ChatScreen()
+        let channelScreen = chatScreen.navigateToChannelScreenBySwipe()
+        
+        // Expected result
+        XCTAssert(channelScreen.addChannelBtn.waitForExistence(timeout: timeout), "Swipe Channel screen segue failed")
+    }
+    
+    func testBackToChatScreenBySwipe() {
+        
+        // Test steps
+        let chatScreen = ChatScreen()
+        let channelScreen = chatScreen.navigateToChannelScreenBySwipe()
+        let chatScreenBack = channelScreen.navigateToChatScreenBySwipe()
+        
+        // Expected result
+        XCTAssert(chatScreenBack.messageTxtFiled.waitForExistence(timeout: timeout), "Swipe Chat screen segue failed")
     }
 }

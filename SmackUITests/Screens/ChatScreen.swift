@@ -26,6 +26,11 @@ class ChatScreen: BaseScreen {
         return ChannelScreen()
     }
     
+    func navigateToChannelScreenBySwipe() -> ChannelScreen {
+        swipeRight(messageTxtFiled)
+        return ChannelScreen()
+    }
+    
     func sendAMessage(msgText: String) {
         messageTxtFiled.clear()
         type(msgText, in: messageTxtFiled)
