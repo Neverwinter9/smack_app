@@ -29,6 +29,23 @@ class LoginScreen: BaseScreen {
         return ChannelScreen()
     }
     
+    func loginBlancAllFields(){
+        emailTxtBox.clear()
+        tap(loginBtn)
+    }
+    
+    func loginBlancEmail(password: String){
+        emailTxtBox.clear()
+        type(password, in: passTxtBox)
+        tap(loginBtn)
+    }
+    
+    func loginBlancPass(email: String){
+        emailTxtBox.clear()
+        type(email, in: emailTxtBox)
+        tap(loginBtn)
+    }
+    
     func tapOnSignUp() -> SignUpScreen {
         tap(signupBtn)
         return SignUpScreen()
@@ -43,4 +60,4 @@ extension LoginScreen {
 }
 
 // MARK: - Close Btn Proto
-// extension LoginScreen: CloseProtocol {}
+extension LoginScreen: CloseProtocol {}

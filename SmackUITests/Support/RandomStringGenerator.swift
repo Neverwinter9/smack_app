@@ -19,7 +19,7 @@ import Foundation
 //    }
 //}
 
-class RandomStringExtension {
+class RandomStringGenerator {
     
     init() {
     }

@@ -39,6 +39,40 @@ class SignUpScreen: BaseScreen {
         tap(createAcntBtn)
         return ChannelScreen()
     }
+    
+    func signUpBlancAllFields(){
+        tap(genBackgroundColorBtn)
+        userNameTxtBox.clear()
+        emailTxtBox.clear()
+        tap(createAcntBtn)
+    }
+    
+    func signUpBlancUsername(email: String, pass: String){
+        tap(genBackgroundColorBtn)
+        userNameTxtBox.clear()
+        emailTxtBox.clear()
+        type(email, in: emailTxtBox)
+        type(pass, in: passTxtBox)
+        tap(createAcntBtn)
+    }
+    
+    func signUpBlancEmail(name: String, pass: String){
+        tap(genBackgroundColorBtn)
+        userNameTxtBox.clear()
+        emailTxtBox.clear()
+        type(name, in: userNameTxtBox)
+        type(pass, in: passTxtBox)
+        tap(createAcntBtn)
+    }
+    
+    func signUpBlancPass(name: String, email: String){
+        tap(genBackgroundColorBtn)
+        userNameTxtBox.clear()
+        emailTxtBox.clear()
+        type(name, in: userNameTxtBox)
+        type(email, in: emailTxtBox)
+        tap(createAcntBtn)
+    }
 }
 
 // MARK: - Visibility
@@ -49,4 +83,4 @@ extension SignUpScreen {
 }
 
 // MARK: - Close Btn Proto
-extension LoginScreen: CloseProtocol {}
+extension SignUpScreen: CloseProtocol {}
