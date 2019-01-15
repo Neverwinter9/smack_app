@@ -17,6 +17,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendBtn: UIButton!
     @IBOutlet weak var typingUsersLbl: UILabel!
+    @IBOutlet weak var loginReminder: UIStackView!
     
     // Variables
     var isTyping: Bool = false
@@ -102,9 +103,11 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if AuthService.instance.isLoggedIn {
             // get channels
             onLoginGetMessages()
+            loginReminder.isHidden = true
         } else {
             channelNameLbl.text = "Please Log In"
             tableView.reloadData()
+            loginReminder.isHidden = false
         }
     }
     

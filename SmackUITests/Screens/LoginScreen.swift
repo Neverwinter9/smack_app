@@ -29,6 +29,13 @@ class LoginScreen: BaseScreen {
         return ChannelScreen()
     }
     
+    func loginWrongEmailFormat(email: String, password: String){
+        emailTxtBox.clear()
+        type(email, in: emailTxtBox)
+        type(password, in: passTxtBox)
+        tap(loginBtn)
+    }
+    
     func loginBlancAllFields(){
         emailTxtBox.clear()
         tap(loginBtn)

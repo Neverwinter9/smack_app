@@ -25,6 +25,18 @@ class BoundaryConditionsTests: BaseTest {
         XCTAssert(app.staticTexts["\(randomMessageOversized)"].waitForExistence(timeout: 3), "A message hasn't been sent")
     }
     
+    func testLoginWrongFormat() {
+        
+        // Test steps
+        let chatScreen = ChatScreen()
+        let channelScreen = chatScreen.navigateToChannelScreen()
+        let loginScreen = channelScreen.tapOnLogin()
+        loginScreen.loginWrongEmailFormat(email: randomMessage, password: TestUserStatic1.password)
+        
+        // Expected result
+        XCTAssert(app.staticTexts["Invalid format of email you entered!"].waitForExistence(timeout: 3), "Invalid email alert didn't come up")
+    }
+    
     func testLoginBlancAllFields() {
         
         // Test steps

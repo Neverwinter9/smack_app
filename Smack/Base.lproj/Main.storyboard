@@ -60,7 +60,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iS4-zU-JFh">
-                                        <rect key="frame" x="161.5" y="45.5" width="52" height="21"/>
+                                        <rect key="frame" x="161.5" y="46" width="52" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -172,11 +172,34 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qSW-G3-DxG">
+                                <rect key="frame" x="66" y="303.5" width="238" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe right to login" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ece-oh-W3q">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="OKz-qa-DRj"/>
+                                            <constraint firstAttribute="width" constant="143" id="gGT-X5-UNh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueArrow" translatesAutoresizingMaskIntoConstraints="NO" id="h4s-uz-C11">
+                                        <rect key="frame" x="158" y="0.0" width="80" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="MlH-hv-rdw"/>
+                                            <constraint firstAttribute="height" constant="60" id="ogr-fU-QzG"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YfH-xb-SI3" firstAttribute="top" secondItem="Nia-SO-jQo" secondAttribute="bottom" constant="6" id="11N-l0-GlT"/>
                             <constraint firstItem="YfH-xb-SI3" firstAttribute="top" secondItem="v1A-km-S0O" secondAttribute="bottom" constant="30" id="26p-Jg-eIq"/>
+                            <constraint firstItem="qSW-G3-DxG" firstAttribute="centerY" secondItem="2DA-VX-izu" secondAttribute="centerY" id="6sG-c3-Ywg"/>
                             <constraint firstItem="Nia-SO-jQo" firstAttribute="leading" secondItem="2DA-VX-izu" secondAttribute="leading" constant="8" id="Cji-TT-A6I"/>
                             <constraint firstAttribute="trailing" secondItem="v1A-km-S0O" secondAttribute="trailing" id="G3B-d3-vnp"/>
                             <constraint firstItem="KqW-Ty-df9" firstAttribute="leading" secondItem="2DA-VX-izu" secondAttribute="leading" id="Mbd-Qc-jSk"/>
@@ -188,11 +211,13 @@
                             <constraint firstItem="v1A-km-S0O" firstAttribute="leading" secondItem="2DA-VX-izu" secondAttribute="leading" id="lQs-Og-4mV"/>
                             <constraint firstItem="v1A-km-S0O" firstAttribute="top" secondItem="KqW-Ty-df9" secondAttribute="bottom" id="mQN-WH-UO2"/>
                             <constraint firstItem="oxW-nb-53h" firstAttribute="top" secondItem="YfH-xb-SI3" secondAttribute="bottom" id="n1T-LJ-gdx"/>
+                            <constraint firstItem="qSW-G3-DxG" firstAttribute="leading" secondItem="2DA-VX-izu" secondAttribute="leadingMargin" constant="50" id="oIW-8o-ldm"/>
                             <constraint firstItem="KqW-Ty-df9" firstAttribute="top" secondItem="2DA-VX-izu" secondAttribute="top" id="vVc-fs-r23"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="channelNameLbl" destination="iS4-zU-JFh" id="p0T-2c-AYF"/>
+                        <outlet property="loginReminder" destination="qSW-G3-DxG" id="8eR-wS-z8L"/>
                         <outlet property="menuBtn" destination="OH6-VM-6CD" id="pv2-DC-6r4"/>
                         <outlet property="messageTxtBox" destination="YfH-xb-SI3" id="5lT-ve-kwk"/>
                         <outlet property="sendBtn" destination="nhB-UO-v3c" id="gkz-dr-zAw"/>
@@ -815,6 +840,7 @@
     </scenes>
     <resources>
         <image name="addChannelButton" width="22" height="22"/>
+        <image name="blueArrow" width="253" height="194"/>
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
