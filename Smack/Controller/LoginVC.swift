@@ -81,6 +81,7 @@ class LoginVC: UIViewController {
     func setupView() {
         // Loading spinner
         spinner.isHidden = true
+        
         disclaimer.isHidden = true
         invalidEmailDisclaimer.isHidden = true
         

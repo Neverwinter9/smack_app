@@ -33,6 +33,12 @@ class ProfileVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func editUsernamePressed(_ sender: Any) {
+        let editUsername = EditUsernameVC()
+        editUsername.modalPresentationStyle = .custom
+        present(editUsername, animated: true, completion: nil)
+    }
+    
     func setupView() {
         
         // To apply user data to ProfileVC
