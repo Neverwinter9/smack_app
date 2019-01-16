@@ -12,6 +12,7 @@ class ProfileScreen: BaseScreen {
     
     // XCUIElements
     let logoutBtn = app.buttons["Logout button"]
+    let editUsernameBtn = app.buttons["Edit username button"]
     
     override init() {
         super.init()
@@ -21,6 +22,11 @@ class ProfileScreen: BaseScreen {
     func tapOnLogout() -> ChannelScreen{
         tap(logoutBtn)
         return ChannelScreen()
+    }
+    
+    func tapOnEditUsername() -> EditUsernameScreen {
+        tap(editUsernameBtn)
+        return EditUsernameScreen()
     }
 }
 

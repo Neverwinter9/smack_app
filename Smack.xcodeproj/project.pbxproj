@@ -40,6 +40,7 @@
 		542212CB21C1F4B7009146DA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 542212CA21C1F4B7009146DA /* SWRevealViewController.m */; };
 		5426C6CA21EDCD7400955B65 /* EditUsernameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5426C6C821EDCD7400955B65 /* EditUsernameVC.swift */; };
 		5426C6CB21EDCD7400955B65 /* EditUsernameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5426C6C921EDCD7400955B65 /* EditUsernameVC.xib */; };
+		5426C6CD21EEAFE600955B65 /* EditUsernameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5426C6CC21EEAFE600955B65 /* EditUsernameScreen.swift */; };
 		548D589521E2F9D10091A55A /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548D589421E2F9D10091A55A /* MessageCell.swift */; };
 		549A5F4421E1A19B008B1AD0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549A5F4321E1A19B008B1AD0 /* Message.swift */; };
 		549FB40A21CCF6F4003DB8B4 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549FB40921CCF6F4003DB8B4 /* RoundedButton.swift */; };
@@ -113,6 +114,7 @@
 		542212CA21C1F4B7009146DA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		5426C6C821EDCD7400955B65 /* EditUsernameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameVC.swift; sourceTree = "<group>"; };
 		5426C6C921EDCD7400955B65 /* EditUsernameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditUsernameVC.xib; sourceTree = "<group>"; };
+		5426C6CC21EEAFE600955B65 /* EditUsernameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUsernameScreen.swift; sourceTree = "<group>"; };
 		548D589421E2F9D10091A55A /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		549A5F4321E1A19B008B1AD0 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		549FB40921CCF6F4003DB8B4 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				540843B921E5E87F0002A2AD /* LoginScreen.swift */,
 				540843C621E6CD040002A2AD /* SignUpScreen.swift */,
 				540843C821E6D0830002A2AD /* ChooseAvatarScreen.swift */,
+				5426C6CC21EEAFE600955B65 /* EditUsernameScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 			files = (
 				540843DA21E87F190002A2AD /* RandomStringGenerator.swift in Sources */,
 				540843D421E832CD0002A2AD /* UserIsNotLoggedInTests.swift in Sources */,
+				5426C6CD21EEAFE600955B65 /* EditUsernameScreen.swift in Sources */,
 				540843CD21E6E8CB0002A2AD /* BaseTest.swift in Sources */,
 				540843D221E741020002A2AD /* BaseStubTest.swift in Sources */,
 				540843C321E6055C0002A2AD /* TestUserStatic1.swift in Sources */,

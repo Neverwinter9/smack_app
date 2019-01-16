@@ -20,4 +20,12 @@ class BaseTest: XCTestCase {
         app.launchArguments = ["deleteAllData"]
         app.launch()
     }
+    
+    // Date() re-formatter
+    func timeStampFormatter(currentTime: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, h:mm a"
+        let formattedDateTime = formatter.string(from: currentTime)
+        return formattedDateTime
+    }
 }

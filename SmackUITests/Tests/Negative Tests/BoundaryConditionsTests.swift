@@ -133,4 +133,19 @@ class BoundaryConditionsTests: BaseTest {
         // Expected result
         XCTAssert(app.staticTexts["All fields are required to be filled!"].waitForExistence(timeout: 3), "Disclaimer didn't come up")
     }
+    
+    func testEditUsernameBlanc() {
+        
+        // Test steps
+        let chatScreen = ChatScreen()
+        let channelScreen = chatScreen.navigateToChannelScreen()
+        let loginScreen = channelScreen.tapOnLogin()
+        let channelScreenLoggedIn = loginScreen.loginAUser(email: TestUserStatic1.email, password: TestUserStatic1.password)
+        let profileScreen = channelScreenLoggedIn.tapOnProfile()
+        let editUsernameScreen = profileScreen.tapOnEditUsername()
+        editUsernameScreen.editUsernameBlank()
+        
+        // Expected result
+        XCTAssert(app.staticTexts["This field is required!"].waitForExistence(timeout: 3), "Disclaimer didn't come up")
+    }
 }
