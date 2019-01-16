@@ -10,7 +10,7 @@ import Foundation
 
 struct TestUserDynamic {
     static let username = "TestUser_\(randIndex.randomElement()!.description)"
-    static let email = "random@user_\(randIndex.randomElement()!.description).com"
+    static let email = "random_\(randIndex.randomElement()!.description)@user.com"
     static let randIndex = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     static let password = "12345"
 }

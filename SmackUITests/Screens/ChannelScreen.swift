@@ -16,6 +16,7 @@ class ChannelScreen: BaseScreen {
     let addChannelBtn = app/*@START_MENU_TOKEN@*/.buttons["Add channel button"]/*[[".buttons[\"addChannelButton\"]",".buttons[\"Add channel button\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
     let channelCell = app.cells["Channel cell"]
     let overflowMenuBtn = app.buttons["Overflow menu button"]
+    let messageTxtFiled = app.textFields["Message text field"]
     
     override init() {
         super.init()
@@ -28,7 +29,7 @@ class ChannelScreen: BaseScreen {
     }
     
     func navigateToChatScreenBySwipe() -> ChatScreen {
-        swipeLeft(addChannelBtn)
+        swipeLeft(messageTxtFiled)
         return ChatScreen()
     }
     
