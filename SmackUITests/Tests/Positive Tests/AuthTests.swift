@@ -16,10 +16,13 @@ class AuthTests: BaseTest {
         let chatScreen = ChatScreen()
         let channelScreen = chatScreen.navigateToChannelScreen()
         let loginScreen = channelScreen.tapOnLogin()
-        let channelScreenLoggedIn = loginScreen.loginAUser(email: TestUserStatic1.email, password: TestUserStatic1.password)
+        _ = loginScreen.loginAUser(email: TestUserStatic1.email, password: TestUserStatic1.password)
         
         // Expected result
-        XCTAssertTrue(channelScreenLoggedIn.isLoggedIn(label: TestUserStatic1.username), "User isn't logged in")
+        XCTAssert(app.staticTexts["\(TestUserStatic1.username)"].waitForExistence(timeout: timeout), "User isn't logged in")
+        
+        // Flaky assertion
+        // XCTAssertTrue(channelScreenLoggedIn.isLoggedIn(label: TestUserStatic1.username), "User isn't logged in")
     }
     
     func testLogoutUser() {

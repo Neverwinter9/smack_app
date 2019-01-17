@@ -64,8 +64,10 @@ class ChannelScreen: BaseScreen {
 }
 
 // MARK: - Visibility
-extension ChannelScreen {
-    private func isVisible() {
-        XCTAssert(addChannelBtn.waitForExistence(timeout: timeout), "ChannelScreen is not visible")
-    }
-}
+
+// Flaky
+//extension ChannelScreen {
+//    private func isVisible() {
+//        XCTAssert(addChannelBtn.waitForExistence(timeout: timeout), "ChannelScreen is not visible")
+//    }
+//}
