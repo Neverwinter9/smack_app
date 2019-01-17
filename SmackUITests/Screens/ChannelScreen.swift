@@ -20,7 +20,7 @@ class ChannelScreen: BaseScreen {
     
     override init() {
         super.init()
-        isVisible()
+        //isVisible()
     }
     
     func navigateToChatScreen() -> ChatScreen {
