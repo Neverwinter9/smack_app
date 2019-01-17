@@ -20,7 +20,7 @@ class ChannelScreen: BaseScreen {
     
     override init() {
         super.init()
-        //isVisible()
+        isVisible()
     }
     
     func navigateToChatScreen() -> ChatScreen {
@@ -64,10 +64,8 @@ class ChannelScreen: BaseScreen {
 }
 
 // MARK: - Visibility
-
-// Flaky
-//extension ChannelScreen {
-//    private func isVisible() {
-//        XCTAssert(addChannelBtn.waitForExistence(timeout: timeout), "ChannelScreen is not visible")
-//    }
-//}
+extension ChannelScreen {
+    private func isVisible() {
+        XCTAssert(addChannelBtn.waitForExistence(timeout: timeout), "ChannelScreen is not visible")
+    }
+}

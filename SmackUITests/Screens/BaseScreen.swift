@@ -11,7 +11,7 @@ import XCTest
 class BaseScreen {
     
     static let app = XCUIApplication()
-    let timeout: TimeInterval = 5
+    let timeout: TimeInterval = 6
     
     // Gestures
     func tap(_ element: XCUIElement) {
