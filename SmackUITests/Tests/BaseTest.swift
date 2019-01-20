@@ -11,7 +11,7 @@ import XCTest
 class BaseTest: XCTestCase {
     
     let app = XCUIApplication()
-    let timeout: TimeInterval = 3
+    let timeout: TimeInterval = 7
     let randomMessage = RandomStringGenerator.init().randomString(length: 10)
     let randomMessageOversized = RandomStringGenerator.init().randomString(length: 100)
     

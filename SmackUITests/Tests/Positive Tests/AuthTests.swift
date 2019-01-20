@@ -20,7 +20,6 @@ class AuthTests: BaseTest {
         
         // Expected result
         XCTAssertTrue(channelScreenLoggedIn.isLoggedIn(label: TestUserStatic1.username), "User isn't logged in")
-        // Testing ngrok tunnel
     }
     
     func testLogoutUser() {

@@ -55,11 +55,7 @@ class ChannelScreen: BaseScreen {
     }
     
     func isLoggedIn(label: String) -> Bool {
-        if loginBtn.label == label {
-            return true
-        } else {
-            return false
-        }
+        return loginBtn.label == label
     }
 }
 
