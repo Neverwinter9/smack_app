@@ -20,6 +20,7 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        NotificationCenter.default.addObserver(self, selector: #selector(ProfileVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
 
     }
     
@@ -37,6 +38,10 @@ class ProfileVC: UIViewController {
         let editUsername = EditUsernameVC()
         editUsername.modalPresentationStyle = .custom
         present(editUsername, animated: true, completion: nil)
+    }
+    
+    @objc func userDataDidChange(_ notif: Notification) {
+        userName.text = UserDataService.instance.name
     }
     
     func setupView() {
