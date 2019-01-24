@@ -62,10 +62,8 @@ class AuthTests: BaseTest {
         let profileScreen = channelScreenLoggedIn.tapOnProfile()
         let editUsernameScreen = profileScreen.tapOnEditUsername()
         let profileScreenEdited = editUsernameScreen.editUsername(newUsername: TestUserDynamic.username)
-        let channelScreenLoggedOut = profileScreenEdited.tapOnLogout()
-        let loginScreen2 = channelScreenLoggedOut.tapOnLogin()
-        let channelScreenLoggedIn2 = loginScreen2.loginAUser(email: TestUserStatic2.email, password: TestUserStatic2.password)
+        let channelScreenEdited = profileScreenEdited.tapOnCloseButton()
         
-        XCTAssertTrue(channelScreenLoggedIn2.isLoggedIn(label: TestUserDynamic.username), "Failed to edit username")
+        XCTAssertTrue(channelScreenEdited.isLoggedIn(label: TestUserDynamic.username), "Failed to edit username")
     }
 }
