@@ -44,6 +44,7 @@ class SignUpScreen: BaseScreen {
         tap(genBackgroundColorBtn)
         userNameTxtBox.clear()
         emailTxtBox.clear()
+        tapCoordinate(at: 20, and: 20)
         tap(createAcntBtn)
     }
     
@@ -53,6 +54,7 @@ class SignUpScreen: BaseScreen {
         emailTxtBox.clear()
         type(email, in: emailTxtBox)
         type(pass, in: passTxtBox)
+        tapCoordinate(at: 20, and: 20)
         tap(createAcntBtn)
     }
     
@@ -62,6 +64,7 @@ class SignUpScreen: BaseScreen {
         emailTxtBox.clear()
         type(name, in: userNameTxtBox)
         type(pass, in: passTxtBox)
+        tapCoordinate(at: 20, and: 20)
         tap(createAcntBtn)
     }
     
@@ -71,6 +74,7 @@ class SignUpScreen: BaseScreen {
         emailTxtBox.clear()
         type(name, in: userNameTxtBox)
         type(email, in: emailTxtBox)
+        tapCoordinate(at: 20, and: 20)
         tap(createAcntBtn)
     }
 }
